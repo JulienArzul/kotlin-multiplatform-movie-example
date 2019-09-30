@@ -1,0 +1,6 @@
+rootProject.name = 'Devfest-Sample'
+
+include ':common'
+include ':android:app'
+
+enableFeaturePreview('GRADLE_METADATA')
