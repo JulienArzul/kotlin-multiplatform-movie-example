@@ -1,4 +1,4 @@
-package sample
+package devfest
 
 expect class Sample() {
     fun checkMe(): Int

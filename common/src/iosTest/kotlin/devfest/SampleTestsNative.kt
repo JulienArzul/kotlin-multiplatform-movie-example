@@ -1,11 +1,11 @@
-package sample
+package devfest
 
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
-class SampleTestsJVM {
+class SampleTestsNative {
     @Test
     fun testHello() {
-        assertTrue("JVM" in hello())
+        assertTrue("iOS" in hello())
     }
 }

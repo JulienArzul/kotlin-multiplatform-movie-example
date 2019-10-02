@@ -1,4 +1,4 @@
-package sample
+package devfest
 
 actual class Sample {
     actual fun checkMe() = 7
