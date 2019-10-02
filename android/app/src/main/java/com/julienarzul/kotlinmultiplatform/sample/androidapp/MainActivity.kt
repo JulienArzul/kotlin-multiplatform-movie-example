@@ -1,9 +1,14 @@
 package com.julienarzul.kotlinmultiplatform.sample.androidapp
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import sample.hello
+import androidx.lifecycle.lifecycleScope
+import devfest.domain.MovieApiService
+import devfest.domain.MovieRepository
+import devfest.hello
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,6 +16,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val repository = MovieRepository(MovieApiService())
+
         findViewById<TextView>(R.id.textView).text = hello()
+
+        lifecycleScope.launch {
+            val movieList = repository.discoverMovies()
+            Log.d("MainActivity", "Movie list: $movieList")
+        }
     }
 }
