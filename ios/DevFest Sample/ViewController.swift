@@ -16,7 +16,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myLabel.text = SampleKt.hello()
+        let repository = MovieRepository(movieApiService: MovieApiService())
+        repository.discoverMovies(coroutineScope: IosCoroutineScope(mainContext: UI())) { (movieList) in
+            print(movieList)
+        }
     }
 
 
