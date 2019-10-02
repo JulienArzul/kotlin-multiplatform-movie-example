@@ -1,23 +1,19 @@
 plugins {
     id 'org.jetbrains.kotlin.multiplatform' version '1.3.50'
+    id("org.jetbrains.kotlin.native.cocoapods") version "1.3.50"
 }
 repositories {
     mavenCentral()
 }
-group 'com.example'
-version '0.0.1'
 
-apply plugin: 'maven-publish'
+group 'com.julienarzul.kotlinmultiplatform.sample'
+version '0.0.1'
 
 kotlin {
     jvm()
     // This is for iPhone emulator
     // Switch here to iosArm64 (or iosArm32) to build library for iPhone device
-    iosX64("ios") {
-        binaries {
-            framework()
-        }
-    }
+    iosX64("ios")
     sourceSets {
         commonMain {
             dependencies {
@@ -45,6 +41,12 @@ kotlin {
         }
         iosTest {
         }
+    }
+
+    cocoapods {
+        // Configure fields required by CocoaPods.
+        summary = "Common lib for DevFest Sample"
+        homepage = "Link to git"
     }
 }
 
