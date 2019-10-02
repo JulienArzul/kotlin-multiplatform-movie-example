@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import common
 
 class ViewController: UIViewController {
 
+    @IBOutlet var myLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        myLabel.text = SampleKt.hello()
     }
 
 

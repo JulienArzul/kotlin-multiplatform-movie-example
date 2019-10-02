@@ -1,0 +1,103 @@
+# Xcode
+.DS_Store
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+derivedDataDirectory
+fastlane/report.xml
+fastlane/README.md
+fastlane/report.xml
+*.ipa
+*.dSYM
+*.zip
+
+# Mac OS X Finder and whatnot
+.DS_Store
+.Trashes
+
+# Sparkle distribution Private Key
+dsa_priv.pem
+
+# Xcode (and ancestors) per-user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+
+#  Whitelist the Xcode defaults
+!default.mode1
+!default.mode1v3
+!default.mode2v3
+!default.perspective
+!default.perspectivev3
+!default.pbxuser
+
+# Xcode 4 - Deprecated classes
+*.moved-aside
+
+# Xcode gcc
+*.hmap
+
+#JetBrains AppCode
+.idea/
+
+# Generated files
+VersionX-revision.h
+
+# build products
+xcuserdata/
+DerivedData/
+build/
+adhoc/
+
+# CocoaPods
+Pods/
+tripleJ/Supporting Files/Acknowledgements.markdown
+
+# Other source repository archive directories
+.hg
+.svn
+CVS
+
+# automatic backup files
+*~.nib
+*.swp
+*~
+*(Autosaved).rtfd/
+Backup[ ]of[ ]*.pages/
+Backup[ ]of[ ]*.key/
+Backup[ ]of[ ]*.numbers/
+Shared/XcodeCoverage/.gitignore
+Shared/XcodeCoverage/LICENSE.txt
+Shared/XcodeCoverage/README.md
+Shared/XcodeCoverage/cleancov
+Shared/XcodeCoverage/envcov.sh
+Shared/XcodeCoverage/exportenv.sh
+Shared/XcodeCoverage/getcov
+
+####
+# Xcode 5 - VCS metadata
+#
+*.xccheckout
+ABCUniversalMockUp.xcodeproj/project.pbxproj.BACKUP.6940.pbxproj
+ABCUniversalMockUp.xcodeproj/project.pbxproj.BASE.6940.pbxproj
+ABCUniversalMockUp.xcodeproj/project.pbxproj.LOCAL.6940.pbxproj
+ABCUniversalMockUp.xcodeproj/project.pbxproj.REMOTE.6940.pbxproj
+infer-out
+
+screenshots/

@@ -1,0 +1,3 @@
+target 'DevFest Sample' do
+     pod 'common', :path => '../common'
+end
