@@ -5,9 +5,9 @@ import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import devfest.domain.MovieApiService
 import devfest.domain.MovieRepository
 import devfest.hello
+import devfest.network.MovieApiService
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {

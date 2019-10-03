@@ -1,15 +1,15 @@
-package devfest.domain.model
+package devfest.network.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class MovieListResponse(
-    val results: List<MovieResult>
+internal data class ApiMovieListResponse(
+    val results: List<ApiMovieLight>
 )
 
 @Serializable
-data class MovieResult(
+internal data class ApiMovieLight(
     val id: Int,
     val title: String,
     val overview: String,
@@ -19,5 +19,6 @@ data class MovieResult(
     val voteAverage: Float,
     @SerialName("vote_count")
     val voteCount: Int,
-    val poster_path: String
+    @SerialName("poster_path")
+    val posterPath: String
 )

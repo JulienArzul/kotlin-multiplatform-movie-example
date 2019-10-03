@@ -1,6 +1,6 @@
-package devfest.domain
+package devfest.network
 
-import devfest.domain.model.MovieListResponse
+import devfest.network.models.ApiMovieListResponse
 import io.ktor.client.HttpClient
 import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.serializer.KotlinxSerializer
@@ -19,7 +19,7 @@ class MovieApiService {
         }
     }
 
-    suspend fun discoverMovies(): MovieListResponse = coroutineScope {
-        client.get<MovieListResponse>("$baseUrl/discover/movie?api_key=$apiKey&sort_by=popularity.desc")
+    internal suspend fun discoverMovies(): ApiMovieListResponse = coroutineScope {
+        client.get<ApiMovieListResponse>("$baseUrl/discover/movie?api_key=$apiKey&sort_by=popularity.desc")
     }
 }
