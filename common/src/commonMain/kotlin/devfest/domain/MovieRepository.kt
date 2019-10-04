@@ -39,6 +39,6 @@ private fun ApiMovieLight.mapToMovie(): Movie? {
         releaseDate,
         voteAverage,
         voteCount,
-        posterPath
+        "${MovieApiService.IMAGE_BASE_URL}/$posterPath"
     )
 }
