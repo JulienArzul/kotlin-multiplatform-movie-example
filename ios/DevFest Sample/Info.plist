@@ -60,5 +60,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>MOVIE_BASE_URL</key>
+	<string>&quot;https://api.themoviedb.org/3&quot;</string>
+	<key>MOVIE_API_KEY</key>
+	<string>MY_API_KEY</string>
 </dict>
 </plist>

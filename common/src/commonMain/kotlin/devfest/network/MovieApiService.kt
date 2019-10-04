@@ -8,14 +8,11 @@ import io.ktor.client.request.get
 import kotlinx.coroutines.coroutineScope
 import kotlinx.serialization.json.Json
 
-class MovieApiService {
+class MovieApiService(private val baseUrl: String, private val apiKey: String) {
 
     companion object {
         internal const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
     }
-
-    private val apiKey = "2d9bf24d8ab4e7f5ab94f25fa24aef3a"
-    private val baseUrl = "https://api.themoviedb.org/3"
 
     private val client: HttpClient = HttpClient {
         install(JsonFeature) {

@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val repository = MovieRepository(MovieApiService())
+        val repository =
+            MovieRepository(MovieApiService(BuildConfig.API_BASE_URL, BuildConfig.API_KEY))
 
         findViewById<TextView>(R.id.textView).text = hello()
 
