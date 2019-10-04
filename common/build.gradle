@@ -27,6 +27,8 @@ kotlin {
                 implementation("io.ktor:ktor-client-core:$ktor_version")
                 implementation "io.ktor:ktor-client-json:$ktor_version"
                 implementation "io.ktor:ktor-client-serialization:$ktor_version"
+
+                implementation "com.soywiz.korlibs.klock:klock:$klock_version"
             }
         }
         commonTest {

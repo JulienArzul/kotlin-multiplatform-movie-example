@@ -1,5 +1,6 @@
 package devfest.domain
 
+import com.soywiz.klock.ISO8601
 import devfest.domain.model.Movie
 import devfest.network.MovieApiService
 import devfest.network.models.ApiMovieLight
@@ -21,13 +22,16 @@ class MovieRepository(private val movieApiService: MovieApiService) {
     }
 
     suspend fun discoverMovies(): List<Movie> = coroutineScope {
-        movieApiService.discoverMovies().results.map {
+        movieApiService.discoverMovies().results.mapNotNull {
             it.mapToMovie()
         }
     }
 }
 
-private fun ApiMovieLight.mapToMovie(): Movie {
+private fun ApiMovieLight.mapToMovie(): Movie? {
+    val releaseDate = ISO8601.DATE.tryParse(releaseDate)?.utc
+        ?: return null
+
     return Movie(
         id,
         title,
