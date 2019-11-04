@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             val movieList = repository.discoverMovies()
             Log.d("MainActivity", "Movie list: $movieList")
+
+            // TODO: Add a ViewModel and display the movies in a RecyclerView
         }
     }
 }

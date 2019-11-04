@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //TODO: Add a ViewModel and display the list of movies in a TableView
         repository.discoverMovies(coroutineScope: IosCoroutineScope(mainContext: UI())) { (movieList) in
             print(movieList)
         }
